@@ -2,14 +2,14 @@
 
 # 🚀 React Components + Lists + Events
 
-Este projeto demonstra o uso de **state no react**, **componentes de classe** e **this.**. Ideal para quem está aprendendo os fundamentos do React.
+Este projeto demonstra o uso de **hooks no react**, **componentes de função** e **useState()/useEffect().**. Ideal para quem está aprendendo os fundamentos do React.
 
 ## 📦 Instalação
 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/GuiTavs7/class_component_panel_with_state.git
+   git clone "url do projeto"
    cd seu-repo
    ```
 
