@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import './deck-of-cards.css';
+import Form from '../forms/form';
 
 async function createDeck(){
     const response = await fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1');
@@ -8,7 +9,7 @@ async function createDeck(){
 }
 
 async function getCards(deckId){
-    const response = await fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=52`);
+    const response = await fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`);
     return await response.json();
 }
 
@@ -47,12 +48,22 @@ const DeckOfCards = () => {
     fetchData();
   }, [])       
 
+  // Vamos usar o operador spread nessa função -> criando um array novo a partir do estado anterior.
+
+  const addCard = (newCard) => {
+    console.log(newCard);
+    setDeck({
+      cards: [...deck.cards, newCard]
+    })
+  }
+
     
 // Usando o operador ternário para uma renderização condicional"
   
 
   return(
      <section className="deck-of-cards">
+        <Form addCard={addCard}/>
         {deck.cards.length > 0 ? <CardsList cards={deck.cards}/> : "Nenhuma carta encontrada!"}
       </section>
   )
