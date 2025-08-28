@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './form.css';
 
 const Form = (props) => {
 
@@ -22,9 +23,9 @@ const Form = (props) => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="image">Endereço da imagem da carta</label>
-                <input type="text" id="image" name="image" onChange={handleInputChange} value={inputs.image}/>
+                <input type="text" id="image" name="image" className="input-text" onChange={handleInputChange} value={inputs.image}/>
             </div>
-            <input type="submit"/>
+            <input type="submit" className="btn-submit"/>
         </form>
         </>
     )
