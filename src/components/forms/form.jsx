@@ -32,15 +32,15 @@ const Form = (props) => {
         <>
         <form onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="image">Endereço da imagem da carta</label>
+                <label htmlFor="image">Link da Imagem</label>
                 <input type="text" id="image" name="image" className="input-text" onChange={handleInputChange} value={inputs.image}/>
             </div>
              <div>
-                <label htmlFor="value">Nome da carta</label>
+                <label htmlFor="value">Nome da Carta</label>
                 <input type="text" id="value" name="value" className="input-text" onChange={handleInputChange} value={inputs.value}/>
             </div>
              <div>
-                <label htmlFor="suit">Naipe da carta</label>
+                <label htmlFor="suit">Naipe da Carta</label>
                 <input type="text" id="suit" name="suit" className="input-text" onChange={handleInputChange} value={inputs.suit}/>
             </div>
             <input type="submit" className="btn-submit"/>
